@@ -16,15 +16,15 @@ api = Api(app)
 def index():
     return '<h1>Teste<h1/>'
 
-@app.before_first_request
-def cria_banco():
-    banco.create_all()
+#@app.before_first_request
+#def cria_banco():
+   # banco.create_all()
 
 api.add_resource(Usuarios, '/users')
 api.add_resource(Usuario, '/users/<int:cpf>')
 
 if __name__ == '__main__':
-    from sql_alchemy import banco
-    banco.init_app(app)
+    #from sql_alchemy import banco
+    #banco.init_app(app)
     app.run(debug=True)
 
