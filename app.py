@@ -7,6 +7,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///banco.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 api = Api(app)
 
+@app.route('/')
+def index():
+    return '<h1>deploy no Heroku realizado com sucesso<h1/>'
+
+
+
 @app.before_first_request
 def cria_banco():
     banco.create_all()
