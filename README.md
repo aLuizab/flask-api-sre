@@ -21,7 +21,9 @@ Requisições para a API devem seguir os padrões:
 https://documenter.getpostman.com/view/12970110/TVRq2m9E
 
 ##Integração com o Github Actions
+
 ![Python application](https://github.com/aLuizab/flask-api-sre/workflows/Python%20application/badge.svg)
 
 ## Deploy no Heroku
+
 [![Heroku App Status](http://heroku-shields.herokuapp.com/quiet-tundra-85753)](https://quiet-tundra-85753.herokuapp.com)
