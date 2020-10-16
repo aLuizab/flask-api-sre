@@ -1,0 +1,8 @@
+.idea/
+Lib/
+Scripts/
+Include/
+banco.db
+pyvenv.cfg
+cria_banco.py
+__pycache__/
