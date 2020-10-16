@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_restful import Api
 from resources.usuario import Usuarios, Usuario
-from sql_alchemy import banco
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///banco.db'
@@ -16,5 +15,7 @@ api.add_resource(Usuarios, '/users')
 api.add_resource(Usuario, '/users/<int:cpf>')
 
 if __name__ == '__main__':
+    from sql_alchemy import banco
     banco.init_app(app)
     app.run(debug=True)
+
