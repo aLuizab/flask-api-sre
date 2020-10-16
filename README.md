@@ -1,6 +1,6 @@
 # API - Consulta de Usuários 
 
-##Apresentação
+## Apresentação
 
 > Documentação para utilização da Api – Consulta de usuários.
 
@@ -20,7 +20,7 @@ Requisições para a API devem seguir os padrões:
 ## Documentação dos métodos
 https://documenter.getpostman.com/view/12970110/TVRq2m9E
 
-##Integração com o Github Actions
+## Integração com o Github Actions
 
 ![Python application](https://github.com/aLuizab/flask-api-sre/workflows/Python%20application/badge.svg)
 
