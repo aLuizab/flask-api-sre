@@ -9,9 +9,7 @@ api = Api(app)
 
 @app.route('/')
 def index():
-    return '<h1>deploy no Heroku realizado com sucesso<h1/>'
-
-
+    return '<h1>Teste<h1/>'
 
 @app.before_first_request
 def cria_banco():
