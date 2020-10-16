@@ -9,18 +9,14 @@ class UsuarioModel(banco.Model):
     sobrenome = banco.Column(banco.String(80))
     email = banco.Column(banco.String(80))
     nascimento = banco.Column(banco.Integer)
-    id = banco.Column(banco.Integer)
 
 
-
-    def __init__(self, cpf, nome, sobrenome, email, nascimento, id):
+    def __init__(self, cpf, nome, sobrenome, email, nascimento):
         self.cpf = cpf
         self.nome = nome
         self.sobrenome = sobrenome
         self.email = email
         self. nascimento = nascimento
-        self.id = id
-
 
     def json(self):
         return {
@@ -29,7 +25,6 @@ class UsuarioModel(banco.Model):
             'sobrenome': self.sobrenome,
             'email': self.email,
             'nascimento': self.nascimento,
-            'id': self.id
         }
 
     @classmethod
@@ -43,9 +38,12 @@ class UsuarioModel(banco.Model):
         banco.session.add(self)
         banco.session.commit()
 
-    def update_usuario(self, nome, sobrenome, email, nascimento, id):
+    def update_usuario(self, nome, sobrenome, email, nascimento):
         self.nome = nome
         self.sobrenome = sobrenome
         self.email = email
         self.nascimento = nascimento
-        self.id = id
+
+    def delete_usuario(self):
+        banco.session.delete(self)
+        banco.session.commit()
