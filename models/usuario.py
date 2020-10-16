@@ -8,7 +8,7 @@ class UsuarioModel(banco.Model):
     nome = banco.Column(banco.String(80))
     sobrenome = banco.Column(banco.String(80))
     email = banco.Column(banco.String(80))
-    nascimento = banco.Column(banco.Integer)
+    nascimento = banco.Column(banco.String(80))
 
 
     def __init__(self, cpf, nome, sobrenome, email, nascimento):
