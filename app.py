@@ -12,7 +12,7 @@ def cria_banco():
     banco.create_all()
 
 api.add_resource(Usuarios, '/users')
-api.add_resource(Usuario, '/users/<string:nome>')
+api.add_resource(Usuario, '/users/<int:cpf>')
 
 if __name__ == '__main__':
     from sql_alchemy import banco

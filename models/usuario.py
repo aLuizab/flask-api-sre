@@ -31,3 +31,21 @@ class UsuarioModel(banco.Model):
             'nascimento': self.nascimento,
             'id': self.id
         }
+
+    @classmethod
+    def find_usuario(cls, cpf):
+        usuario = cls.query.filter_by(cpf=cpf).first()
+        if usuario:
+            return usuario
+        return None
+
+    def save_usuario(self):
+        banco.session.add(self)
+        banco.session.commit()
+
+    def update_usuario(self, nome, sobrenome, email, nascimento, id):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.email = email
+        self.nascimento = nascimento
+        self.id = id
